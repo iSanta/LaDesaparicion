@@ -1,0 +1,1194 @@
+/* -----------------------------------------------------------------------------Variables
+$colorWhite: #D7D7D9
+$colorDarkBlue: #060B0D
+$colorMiddleBlue: #2D3740
+
+
+
+@mixin notSelectableText
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+
+@mixin buttonM
+  background: none
+  border: 5px solid $colorWhite
+  padding: 10px 10px 0px 10px
+  color: $colorWhite
+  font-family: "LongShot"
+  font-size: 70px
+  text-transform: uppercase
+  outline: none
+  cursor: pointer
+  transition: all 0.3s
+  text-align: center
+  @include notSelectableText
+
+@mixin normalTextM
+  font-family: "GeosansLight"
+  color: $colorWhite
+  font-size: 30px
+
+@mixin titleTextM
+  font-family: "LongShot"
+  color: $colorWhite
+  font-size: 60px
+
+/*-------------------------------------------------------------------------------------desktop small*/
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1380px)
+  body
+    .section
+      #fullCharacterInfo
+        top: 260px
+        #imageBox
+          width: 38vw
+        #textInfo
+          width: 52vw
+      .content
+        .aboutUsModalM
+          display: none
+        .aboutUsModal
+          width: 100%
+          left: 0
+          overflow: hidden
+          .characterAboutUs:hover>.shortInfo
+            bottom: 15px
+          .characterAboutUs
+            width: 50%
+            height: auto
+          .fullInfoBox
+            width: 50%
+            height: 67vh
+    .movileMenuBtn
+      display: none
+    nav
+      ul
+        left: 5%
+        width: 70%
+
+
+/*------------------------------------------------------------------------------Tablet Landscape*/
+@media all and (max-width: 1024px) and (min-width: 769px) and (orientation: landscape)
+  body
+    #home
+      .homeContent
+        .opaque
+          .soundMenuBox
+            .optionsSound
+              .itemSoundModeBox
+                .itemSoundMode
+                  img
+                    height: 100px
+      .film
+
+        #ganzuaBox
+          .QTInstructions
+            .slideQTDots
+              height: 10px
+            .btnCerrarSlide
+              width: 18vw
+              margin-left: 41vw
+              font-size: 30px
+            .slideQuickTimeBox
+              min-height: 240px
+              .slideElementQTHidde
+                height: 200px
+        #controlsBox
+          left: 2vw
+          .controlBtn
+            width: 2vw
+            height: 2vw
+        .pausaMenu
+          .pausaTitleBox
+            margin-top: 5%
+            .btnMenuBox
+              width: 50%
+              margin-left: 25%
+    .section
+      .castSlide
+        ul
+          li
+            .tag
+              .text
+                .socialMediaCharacter
+                  img
+                    width: 20px
+                    margin-right: 5px
+                .titleText
+                  font-size: 25px
+                .infoTex
+                  font-size: 16px
+      #whatIsItModal
+        .infoPanel
+          .textWI
+            .textBox
+              padding: 10px 0
+              .title
+                font-size: 25px
+                left: 5%
+              .subtitle
+                font-size: 20px
+                left: 5%
+                width: 90%
+              .text
+                font-size: 16px
+                left: 5%
+                width: 90%
+      #fullCharacterInfo
+        top: 265px
+        #imageBox
+          width: 48vw
+        #textInfo
+          width: 42vw
+          #characterName
+            font-size: 25px
+          #characterInfo
+            font-size: 16px
+      .content
+        margin-top: 10vw
+        p
+          font-size: 16px
+        .subtitulosAgradecimientos
+          font-size: 25px
+        .contactBox
+          min-height: 45vw
+          .contactForm
+            form
+              .inputText
+                font-size: 16px
+                height: 20px
+              textarea
+                font-size: 16px
+          .contactText
+            .contactTitle
+              font-size: 25px
+            .contactInfo
+              font-size: 16px
+        .agradecimientosBlock
+          min-height: 450px
+          .itemAgradecimientos
+            .text
+              .titleText
+                font-size: 25px
+              .infoTex
+                font-size: 16px
+              .socialMediaCharacter
+                img
+                  width: 20px
+                  margin-right: 4px
+          .itemAgradecimientosVacio
+            display: none
+          .itemAgradecimientosSmallScreen
+            width: 44%
+            margin: 0 3%
+          .itemSolitario
+            margin-left: 28% !important
+        .aboutUsModalM
+          display: none
+        .aboutUsModal
+          width: 100%
+          left: 0
+          overflow: hidden
+          height: 40vw
+          .characterAboutUs
+            .shortInfo
+              .shortName
+                margin: 4px 0 0 20px
+          .characterAboutUs:hover>.shortInfo
+            bottom: 3px
+          .characterAboutUs
+            width: 50%
+            height: auto
+          .fullInfoBox
+            width: 50%
+            height: 100%
+            .infoCharacterTitle
+              font-size: 25px
+            .infoCharacterText
+              font-size: 16px
+            .closeFullInfo
+              top: 10px
+              right: 10px
+              width: 20px
+            .socialMediaCharacter
+              margin-bottom: -2vw
+            .infoCharacter
+              top: 3%
+              left: 3% !important
+              width: 94%
+    .movileMenuBtn
+      display: none
+    nav
+      ul
+        left: 1%
+        width: 90%
+        li
+          .navLink
+            font-size: 16px
+    .socialMedia
+      right: 1% !important
+
+/*------------------------------------------------------------------------------------Ipad Portrate*/
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait)
+  body
+    .section
+      .creditsBox
+        .textBoxCredits
+          .textLine
+            .leftC
+              img
+                width: 70%
+                margin-left: 20%
+            .rightC
+              img
+                width: 70%
+                margin-left: 10%
+      #fullCharacterInfo
+        position: fixed
+        height: 100vh
+        top: 0
+        .closeFullInfo
+          width: 50px
+        #imageBox
+          width: 100%
+        #textInfo
+          width: 90%
+          #characterName
+            @include titleTextM
+          #characterInfo
+            @include normalTextM
+          .socialMediaCharacter
+            a
+              img
+                width: 50px
+      .castSlide
+        margin-top: 130px
+        margin-bottom: 130px
+        .arrow
+          width: 50px
+        ul
+          li
+            .tag
+              left: 5%
+              width: 70%
+              .text
+                .titleText
+                  font-size: 30px
+                  border-bottom: none
+                  text-align: center
+                .infoTex
+                  display: none
+                .socialMediaCharacter
+                  display: none
+      #whatIsItModal
+        display: none
+      #Footer
+        img
+          width: 80%
+          left: 10%
+      .content
+        margin-top: 10vw
+        width: 90%
+        left: 0%
+        margin-left: 5%
+        .title
+          width: auto
+          height: 70px
+
+        .contactBox
+          .contactForm
+            width: 100%
+            float: none
+            margin-bottom: 50px
+            form
+              .inputText
+                height: 50px
+                font-size: 30px
+                margin: 4px 0
+              textarea
+                font-size: 30px
+                margin: 4px 0
+              .inputSubmit
+                height: 50px
+                font-size: 30px
+          .contactText
+            width: 100%
+            float: none
+            .contactTitle
+              font-size: 60px
+            .contactInfo
+              font-size: 30px
+        .subtitulosAgradecimientos
+          font-size: 60px
+        .agradecimientosBlock
+          .itemAgradecimientos
+            width: 92%
+            padding: 50px 2%
+            float: none
+            .text
+              .socialMediaCharacter
+                img
+                  width: 50px
+              .titleText
+                font-size: 60px
+              .infoTex
+                font-size: 30px
+          .itemAgradecimientosVacio
+            display: none
+        .footerOnlyM
+          display: block
+        #whatIsItModalM
+          display: block
+          width: 100%
+          margin-top: 50px
+          background: $colorMiddleBlue
+          .textBox
+            position: relative
+            width: 92%
+            margin: 0 4%
+            padding: 50px 0
+            .title
+              @include titleTextM
+              border-bottom: 3px solid $colorWhite
+            .subtitle
+              @include normalTextM
+              font-size: 40px
+              margin-bottom: 30px
+            .text
+              @include normalTextM
+          img
+            width: 100%
+        p
+          width: 100%
+          @include normalTextM
+
+        .aboutUsModal
+          display: none
+        .aboutUsModalM
+          display: block
+          position: relative
+          width: 100%
+          .characterAboutUs
+            margin-top: 50px
+            img
+              width: 100%
+              height: auto
+          .fullInfoBox
+            width: 100%
+            .infoCharacter
+              padding: 50px 4%
+              width: 92%
+              background: $colorMiddleBlue
+              .infoCharacterTitle
+                @include titleTextM
+              .infoCharacterText
+                @include normalTextM
+              .socialMediaCharacter
+                a
+                  img
+                    width: 50px
+                    margin-right: 10px
+
+    #home
+      .film
+        .pausaMenu
+          #timeLine
+            width: 90%
+            margin-left: 4%
+            border-left: 2px solid $colorWhite
+            border-right: 2px solid $colorWhite
+            .dashLine
+              height: 0
+              border-top: 1px dashed $colorWhite
+              border-bottom: 1px dashed $colorWhite
+          .pausaText
+            width: 80%
+            margin-left: 10%
+            font-size: 30px
+          .pausaTitleBox
+            top: 20vh
+            .btnMenuBox
+              width: 80%
+              margin-left: 10%
+              .btnMenu
+                font-size: 60px
+                padding: 3vw 1vw 2.6vw 1vw
+            img
+              width: 40%
+              margin-left: 30%
+        background: $colorDarkBlue
+        #controlsBox
+          left: 20px
+          bottom: 20px
+          .controlBtn
+            width: 50px
+            height: 50px
+        #decisionBox
+          height: 400px
+          .optionBox
+            height: 250px
+            .optionValue
+              #option1, #option2
+                p
+                  font-size: 60px
+
+        #ganzuaBox
+          .QTgame
+            .QTinteractionsBox
+              width: 80%
+              .timerContainer
+                width: 100%
+                left: 0
+            .QTcerraduraBox
+              position: absolute
+
+              width: 50%
+          .QTInstructions
+            .btnCerrarSlide
+              width: 40vw
+              font-size: 60px
+              margin-left: 30vw
+              padding: 3vw 1vw 2.6vw 1vw
+            .slideQuickTimeBox
+              width: 90%
+              margin-left: 5%
+            .slideQTDots
+              width: 30vw
+              margin: 30px 0 30px 35vw
+              height: 50px
+              .dotQT
+                width: 50px
+                height: 50px
+                border-radius: 50px
+      .homeContent
+        .opaque
+          .soundMenuBox
+            .soundTitle
+              width: 60%
+              left: 20%
+            .optionsSound
+              width: 90%
+              left: 5%
+              .itemSoundModeBox
+                .itemSoundMode
+                  p
+                    font-size: 30px
+                #optionSound2
+                  img
+                    left: 23%
+                #optionSound3
+                  img
+                    left: 15%
+          .startButton
+            left: 34%
+            @include buttonM
+          .logo
+            width: 80%
+            left: 10%
+    background: silver
+    .movileMenuBtn
+      background: $colorDarkBlue
+      display: block
+      position: fixed
+      width: 50px
+      height: 50px
+      margin: 15px
+      cursor: pointer
+      z-index: 11
+      img
+        position: absolute
+        width: 100%
+        transition: all 0.2s
+      #menuImageClose
+        opacity: 0
+    nav
+      position: fixed
+      width: 100%
+      height: auto
+      padding-top: 80px
+      background: $colorDarkBlue
+      top: 500px
+      transition: all ease-out 0.2s
+      z-index: 10
+      .socialMedia
+        right: 2%
+        top: 15px
+        a
+          img
+            width: 50px
+            height: 50px
+      ul
+        position: relative
+        width: 100%
+        top: 0
+        left: 0
+        .separate
+          border-right: none
+        li
+          width: 100%
+          text-align: center
+          background: $colorDarkBlue
+          outline: 1px solid $colorWhite
+          padding: 0
+          .navLink
+            font-size: 35px
+            line-height: 80px
+
+
+/*------------------------------------------------------------------------------Movil Portrait*/
+
+@media all and (max-width: 599px)
+  body
+    .section
+      .creditsBox
+        .textBoxCredits
+          .textLine
+            .leftC
+              img
+                width: 70%
+                margin-left: 20%
+                font-size: 16px
+            .rightC
+              img
+                width: 70%
+                margin-left: 10%
+                font-size: 16px
+      #fullCharacterInfo
+        position: fixed
+        height: 100vh
+        top: 0
+        .closeFullInfo
+          width: 50px
+        #imageBox
+          width: 100%
+        #textInfo
+          width: 90%
+          #characterName
+            @include titleTextM
+            font-size: 40px
+          #characterInfo
+            @include normalTextM
+            font-size: 20px
+          .socialMediaCharacter
+            width: 50%
+            a
+              img
+                width: 30px
+      .castSlide
+        margin-top: 130px
+        margin-bottom: 130px
+        .arrow
+          width: 50px
+        ul
+          li
+            .tag
+              left: 5%
+              width: 70%
+              .text
+                .titleText
+                  font-size: 30px
+                  border-bottom: none
+                  text-align: center
+                .infoTex
+                  display: none
+                .socialMediaCharacter
+                  display: none
+      #whatIsItModal
+        display: none
+      #Footer
+        img
+          width: 80%
+          left: 10%
+      .content
+        margin-top: 80px
+        width: 90%
+        left: 0%
+        margin-left: 5%
+        .title
+          width: auto
+          height: 50px
+
+        .contactBox
+          .contactForm
+            width: 100%
+            float: none
+            margin-bottom: 50px
+            form
+              .inputText
+                height: 30px
+                font-size: 20px
+                margin: 2px 0
+              textarea
+                font-size: 20px
+                margin: 2px 0
+              .inputSubmit
+                height: 30px
+                font-size: 20px
+          .contactText
+            width: 100%
+            float: none
+            .contactTitle
+              font-size: 30px
+            .contactInfo
+              font-size: 20px
+        .subtitulosAgradecimientos
+          font-size: 30px
+        .agradecimientosBlock
+          .itemAgradecimientos
+            width: 92%
+            padding: 50px 2%
+            float: none
+            .text
+              .socialMediaCharacter
+                img
+                  width: 25px
+              .titleText
+                font-size: 25px
+              .infoTex
+                font-size: 20px
+          .itemAgradecimientosVacio
+            display: none
+          .itemSolitario
+            margin-left: 0% !important
+        .footerOnlyM
+          display: block
+        #whatIsItModalM
+          display: block
+          width: 100%
+          margin-top: 50px
+          background: $colorMiddleBlue
+          .textBox
+            position: relative
+            width: 92%
+            margin: 0 4%
+            padding: 50px 0
+            .title
+              @include titleTextM
+              font-size: 30px
+              border-bottom: 3px solid $colorWhite
+            .subtitle
+              @include normalTextM
+              font-size: 25px
+              margin-bottom: 30px
+            .text
+              @include normalTextM
+              font-size: 20px
+          img
+            width: 100%
+        p
+          width: 100%
+          @include normalTextM
+          font-size: 20px
+
+        .aboutUsModal
+          display: none
+        .aboutUsModalM
+          display: block
+          position: relative
+          width: 100%
+          .characterAboutUs
+            margin-top: 50px
+            img
+              width: 100%
+              height: auto
+          .fullInfoBox
+            width: 100%
+            .infoCharacter
+              padding: 50px 4%
+              width: 92%
+              background: $colorMiddleBlue
+              .infoCharacterTitle
+                @include titleTextM
+                font-size: 30px
+              .infoCharacterText
+                @include normalTextM
+                font-size: 20px
+              .socialMediaCharacter
+                a
+                  img
+                    width: 30px
+                    margin-right: 10px
+
+    #home
+      .film
+        .pausaMenu
+          #timeLine
+            width: 90%
+            margin-left: 4%
+            border-left: 2px solid $colorWhite
+            border-right: 2px solid $colorWhite
+            .dashLine
+              height: 0
+              border-top: 1px dashed $colorWhite
+              border-bottom: 1px dashed $colorWhite
+          .pausaText
+            width: 80%
+            margin-left: 10%
+            font-size: 20px
+          .pausaTitleBox
+            top: 20vh
+            .btnMenuBox
+              width: 80%
+              margin-left: 10%
+              .btnMenu
+                font-size: 30px
+                padding: 3vw 1vw 2.6vw 1vw
+            img
+              width: 40%
+              margin-left: 30%
+        background: $colorDarkBlue
+        #controlsBox
+          left: 20px
+          bottom: 20px
+          height: 50px
+          .controlBtn
+            width: 30px
+            height: 30px
+        #decisionBox
+          height: 300px
+          .optionBox
+            height: 150px
+            .optionValue
+              #option1, #option2
+                p
+                  font-size: 30px
+
+        #ganzuaBox
+          .QTgame
+            .QTinteractionsBox
+              width: 80%
+              .timerContainer
+                width: 100%
+                left: 0
+            .QTcerraduraBox
+              position: absolute
+
+              width: 50%
+          .QTInstructions
+            .btnCerrarSlide
+              width: 40vw
+              font-size: 30px
+              margin-left: 30vw
+              padding: 3vw 1vw 2.6vw 1vw
+            .slideQuickTimeBox
+              width: 90%
+              margin-left: 5%
+              min-height: 350px
+              .slideElementQT
+                height: 350px
+                img
+                  left: 0
+                  width: 100%
+            .slideQTDots
+              width: 35vw
+              margin: 30px 0 30px 35vw
+              height: 50px
+              .dotQT
+                width: 30px
+                height: 30px
+                border-radius: 50px
+      .homeContent
+        .backgroundImage
+          width: auto
+          height: 100%
+        .opaque
+          .soundMenuBox
+            .soundTitle
+              width: 60%
+              left: 20%
+            .optionsSound
+              width: 90%
+              left: 5%
+              .itemSoundModeBox
+                .itemSoundMode
+                  img
+                    height: 125px
+                  p
+                    font-size: 20px
+                #optionSound2
+                  img
+                    left: 23%
+                #optionSound3
+                  img
+                    left: 15%
+          .startButton
+            left: 30%
+            @include buttonM
+            font-size: 40px
+          .logo
+            width: 80%
+            left: 10%
+    .movileMenuBtn
+      background: $colorDarkBlue
+      display: block
+      position: fixed
+      width: 50px
+      height: 50px
+      margin: 15px
+      cursor: pointer
+      z-index: 11
+      img
+        position: absolute
+        width: 100%
+        transition: all 0.2s
+      #menuImageClose
+        opacity: 0
+    nav
+      position: fixed
+      width: 100%
+      height: auto
+      padding-top: 80px
+      background: $colorDarkBlue
+      top: -500px
+      transition: all ease-out 0.2s
+      z-index: 10
+      .socialMedia
+        right: 2%
+        top: 15px
+        a
+          img
+            width: 50px
+            height: 50px
+      ul
+        position: relative
+        width: 100%
+        top: 0
+        left: 0
+        .separate
+          border-right: none
+        li
+          width: 100%
+          text-align: center
+          background: $colorDarkBlue
+          outline: 1px solid $colorWhite
+          padding: 0
+          .navLink
+            font-size: 20px
+            line-height: 50px
+
+/*------------------------------------------------------------------------------mobil Landscape*/
+@media all and (max-width: 769px) and (orientation: landscape)
+  body
+    .section
+      #fullCharacterInfo
+        position: fixed
+        height: 100vh
+        top: 0
+        .closeFullInfo
+          width: 25px
+        #textInfo
+          #characterName
+            @include titleTextM
+            font-size: 25px
+          #characterInfo
+            @include normalTextM
+            font-size: 16px
+          .socialMediaCharacter
+            width: 50%
+            a
+              img
+                width: 30px
+      .castSlide
+        margin-top: 130px
+        margin-bottom: 130px
+        .arrow
+          width: 50px
+        ul
+          li
+            .tag
+              left: 5%
+              width: 70%
+              .text
+                .titleText
+                  font-size: 30px
+                  border-bottom: none
+                  text-align: center
+                .infoTex
+                  display: none
+                .socialMediaCharacter
+                  display: none
+      #whatIsItModal
+        display: none
+      #Footer
+        img
+          width: 70%
+          left: 15%
+      .content
+        .contactBox
+          .contactForm
+            width: 100%
+            float: none
+            margin-bottom: 50px
+            form
+              .inputText
+                height: 25px
+                font-size: 16px
+                margin: 2px 0
+              textarea
+                font-size: 16px
+                margin: 2px 0
+              .inputSubmit
+                height: 30px
+                font-size: 16px
+          .contactText
+            width: 100%
+            float: none
+            .contactTitle
+              font-size: 25px
+            .contactInfo
+              font-size: 16px
+        .subtitulosAgradecimientos
+          font-size: 35px
+          margin: 15px 0
+        .agradecimientosBlock
+          .itemAgradecimientos
+            width: 92%
+            padding: 50px 2%
+            float: none
+            .text
+              .socialMediaCharacter
+                img
+                  width: 20px
+                  margin-right: 5px
+              .titleText
+                font-size: 25px
+              .infoTex
+                font-size: 16px
+          .itemAgradecimientosVacio
+            display: none
+          .itemSolitario
+            margin-left: 0% !important
+        .footerOnlyM
+          display: block
+        #whatIsItModalM
+          display: block
+          width: 100%
+          margin-top: 50px
+          background: $colorMiddleBlue
+          .textBox
+            position: relative
+            width: 92%
+            margin: 0 4%
+            padding: 50px 0
+            .title
+              @include titleTextM
+              font-size: 30px
+              border-bottom: 3px solid $colorWhite
+            .subtitle
+              @include normalTextM
+              font-size: 25px
+              margin-bottom: 30px
+            .text
+              @include normalTextM
+              font-size: 20px
+          img
+            width: 100%
+        .title
+          height: 50px
+        p
+          font-size: 16px
+        .aboutUsModal
+          display: none
+        .aboutUsModalM
+          display: block
+          position: relative
+          width: 100%
+          .characterAboutUs
+            margin-top: 50px
+            img
+              width: 100%
+              height: auto
+          .fullInfoBox
+            width: 100%
+            .infoCharacter
+              padding: 50px 4%
+              width: 92%
+              background: $colorMiddleBlue
+              .infoCharacterTitle
+                @include titleTextM
+                font-size: 25px
+              .infoCharacterText
+                @include normalTextM
+                font-size: 16px
+              .socialMediaCharacter
+                a
+                  img
+                    width: 30px
+                    margin-right: 10px
+    #home
+      .film
+        .pausaMenu
+          #timeLine
+            width: 90%
+            height: 50px
+            margin-left: 4%
+            border-left: 2px solid $colorWhite
+            border-right: 2px solid $colorWhite
+            .completedLine1
+              top: 51%
+            .dashLine
+              height: 0
+              top: 53%
+              border-top: 1px dashed $colorWhite
+              border-bottom: 1px dashed $colorWhite
+          .pausaText
+            width: 80%
+            margin-left: 10%
+            font-size: 20px
+          .pausaTitleBox
+            top: 50px
+            margin-top: 0
+            .btnMenuBox
+              width: 50%
+              margin-left: 25%
+              margin-top: 25px
+              .btnMenu
+                font-size: 25px
+                padding: 2vw 0vw 1.6vw 0vw
+                width: 44%
+                border: 3px solid $colorWhite
+            img
+              width: 20%
+              margin-left: 40%
+        background: $colorDarkBlue
+        #controlsBox
+          width: 5%
+          left: 20px
+          bottom: 5px
+          height: 50px
+          .controlBtn
+            width: 20px
+            height: 20px
+        #decisionBox
+          height: 300px
+          .optionBox
+            height: 150px
+            .optionValue
+              #option1, #option2
+                p
+                  font-size: 30px
+
+        #ganzuaBox
+
+          .QTgame
+            .QTinteractionsBox
+              width: 80%
+              .QTbuttonsBox
+                width: 20%
+                right: 30%
+                .QTButton
+                  font-size: 25px
+                  border: 3px solid $colorWhite
+              .timerContainer
+                width: 100%
+                left: 0
+            .QTcerraduraBox
+              position: absolute
+              width: 30%
+          .QTInstructions
+            .quickTimeTitle
+              font-size: 35px
+              margin-top: 1vw
+            .btnCerrarSlide
+              width: 25vw
+              font-size: 25px
+              margin-left: 37vw
+              padding: 2vw 0vw 1.6vw 0vw
+              border: 3px solid $colorWhite
+            .slideQuickTimeBox
+              width: 90%
+              margin-left: 5%
+              min-height: 200px
+              .slideElementQT
+                height: 200px
+                .slideText
+                  width: 100%
+                  margin-left: 0
+                img
+                  margin-top: 5px
+            .slideQTDots
+              width: 25vw
+              margin: 5px 0 5px 41vw
+              height: 20px
+              .dotQT
+                width: 20px
+                height: 20px
+                border-radius: 50px
+      .homeContent
+        .opaque
+          .soundMenuBox
+            .soundTitle
+              width: 40%
+              left: 30%
+              top: 50px
+            .optionsSound
+              width: 90%
+              left: 5%
+              .itemSoundModeBox
+                .itemSoundMode
+                  img
+                    height: 100px
+                  p
+                    font-size: 16px
+                #optionSound2
+                  img
+                    left: 35%
+                #optionSound3
+                  img
+                    left: 28%
+      .homeContent
+        .opaque
+          .startButton
+            font-size: 25px
+            border: 3px solid #D7D7D9
+    .movileMenuBtn
+      background: $colorDarkBlue
+      display: block
+      position: fixed
+      width: 25px
+      height: 25px
+      margin: 15px
+      cursor: pointer
+      z-index: 11
+      img
+        position: absolute
+        width: 100%
+        transition: all 0.2s
+      #menuImageClose
+        opacity: 0
+    nav
+      position: fixed
+      width: 100%
+      height: auto
+      padding-top: 50px
+      background: $colorDarkBlue
+      top: -500px
+      transition: all ease-out 0.2s
+      z-index: 10
+      .socialMedia
+        right: 2%
+        top: 15px
+        a
+          img
+            width: 25px
+            height: 25px
+      ul
+        position: relative
+        width: 100%
+        top: 0
+        left: 0
+        .separate
+          border-right: none
+        li
+          width: 100%
+          text-align: center
+          background: $colorDarkBlue
+          outline: 1px solid $colorWhite
+          padding: 0
+          .navLink
+            font-size: 20px
+            line-height: 35px

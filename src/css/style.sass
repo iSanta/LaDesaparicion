@@ -1,0 +1,1237 @@
+$colorWhite: #D7D7D9
+$colorDarkBlue: #060B0D
+$colorMiddleBlue: #2D3740
+
+@font-face
+  font-family: 'GeosansLight'
+  src: url("../fonts/GeosansLight.ttf")
+
+@font-face
+  font-family: 'LongShot'
+  src: url("../fonts/Long_Shot_Modificado.ttf")
+
+a
+  color: inherit
+
+@mixin notSelectableText
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+
+@mixin button
+  background: none
+  border: 5px solid $colorWhite
+  padding: 1vw 1vw 0.6vw 1vw
+  color: $colorWhite
+  font-family: "LongShot"
+  font-size: 40px
+  text-transform: uppercase
+  outline: none
+  cursor: pointer
+  transition: all 0.3s
+  text-align: center
+  @include notSelectableText
+
+@mixin normalText
+  font-family: "GeosansLight"
+  color: $colorWhite
+  font-size: 18px
+@mixin titleText
+  font-family: "LongShot"
+  color: $colorWhite
+  font-size: 30px
+
+@mixin buttonHover
+  background: $colorWhite
+  color: $colorDarkBlue
+html
+  scroll-behavior: smooth
+.stop-scrolling
+  height: 100%
+  overflow: hidden
+
+*
+  text-decoration: none
+  margin: 0
+  padding: 0
+  list-style: none
+
+.video-react-video
+  pointer-events: none
+
+
+body
+  background-color: $colorDarkBlue
+  overflow-x: hidden
+  .section
+    position: absolute
+    top: 0vw
+    left: 0
+    width: 100%
+    min-height: 100vh
+    background: $colorDarkBlue
+    .creditsBox
+      width: 100%
+      height: 100vh
+      overflow: hidden
+      .textBoxCredits
+        position: relative
+        width: 100%
+        height: auto
+        top: 85%
+
+        .titleLine
+          text-transform: uppercase
+          text-align: center
+          margin: 50px 0
+          @include titleText
+        .logoFilm
+          width: 40%
+          margin: 50px 30% 50px 30%
+        .textLine
+          position: relative
+          width: 100%
+          min-height: 22px
+          float: none
+          display: flow-root
+          .halfLine
+            width: 50%
+            float: left
+            min-height: 22px
+            @include normalText
+          .leftC
+            text-align: right
+            white-space: pre-wrap
+            font-weight: bolder
+            img
+              width: 40%
+              margin-left: 50%
+          .rightC
+            white-space: pre-wrap
+            width: 45%
+            img
+              width: 40%
+              margin-left: 10%
+
+      .shadowCreditsTop
+        position: absolute
+        background: rgb(6,11,13)
+        background: linear-gradient(180deg, rgba(6,11,13,1) 51%, rgba(6,11,13,0) 100%)
+        width: 100%
+        height: 20vh
+        z-index: 2
+      .shadowCreditsBottom
+        position: absolute
+        bottom: 0
+        background: rgb(6,11,13)
+        background: linear-gradient(0deg, rgba(6,11,13,1) 51%, rgba(6,11,13,0) 100%)
+        width: 100%
+        height: 20vh
+        z-index: 2
+    #whatIsItModalM
+      display: none
+    #whatIsItModal
+      position: relative
+      width: 100%
+      height: 100vh
+      overflow: hidden
+      background: $colorMiddleBlue
+      margin-top: 50px
+      .infoPanel
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        .textWI
+          position: absolute
+          width: 40%
+          height: auto
+          left: 30%
+          bottom: 0
+          .textBox
+            position: absolute
+            bottom: -40px
+            opacity: 0
+            padding: 40px 0
+            .title
+              position: relative
+              left: 10%
+              width: 50%
+              font-family: "LongShot"
+              color: $colorWhite
+              font-size: 35px
+              text-transform: uppercase
+              border-bottom: 3px solid $colorWhite
+              margin-bottom: 10px
+            .subtitle
+              position: relative
+              left: 10%
+              width: 80%
+              font-family: "GeosansLight"
+              color: $colorWhite
+              font-size: 25px
+              margin-bottom: 20px
+            .text
+              position: relative
+              left: 10%
+              width: 80%
+              font-family: "GeosansLight"
+              color: $colorWhite
+              font-size: 18px
+        .image3Box
+          position: absolute
+          width: 30%
+          height: 100%
+          top: 0
+          left: 70%
+          overflow: hidden
+          img
+            position: absolute
+            left: 0
+            top: -100%
+            height: 100%
+        .image2Box
+          position: absolute
+          width: 40%
+          height: 50%
+          top: 0
+          left: 30%
+          overflow: hidden
+          img
+            position: absolute
+            left: 0
+            top: -100%
+            width: 100%
+          .fotogSlide
+            position: absolute
+            left: 0
+            top: -100%
+            width: 100%
+        .image1Box
+          position: absolute
+          width: 30%
+          height: 100%
+          top: 0
+          left: 0
+          overflow: hidden
+          img
+            position: absolute
+            left: 0
+            top: -100%
+            height: 100%
+      .dotBox
+        position: absolute
+        width: auto
+        height: auto
+        top: 25px
+        left: 25px
+        z-index: 5
+        .dot:hover > span
+          left: 35px
+          opacity: 1
+        .dot
+          position: relative
+          width: auto
+          height: auto
+          border-radius: 25px
+          border: 1px solid $colorWhite
+          margin: 10px 0px
+          padding: 3px
+          cursor: pointer
+          span
+            position: absolute
+            font-family: "GeosansLight"
+            color: $colorWhite
+            font-size: 18px
+            left: 25px
+            top: 0
+            width: 100px
+            opacity: 0
+            transition: all 0.3s
+          .dotInside
+            position: relative
+            width: 15px
+            border-radius: 25px
+            height: 15px
+            transition: all 0.3s
+
+    #fullCharacterInfo
+      position: absolute
+      left: -100%
+      width: 100%
+      top: 250px
+      min-height: 10vw
+      background: $colorMiddleBlue
+      z-index: 3
+      .closeFullInfo
+        position: absolute
+        top: 20px
+        right: 20px
+        width: 25px
+        height: auto
+        cursor: pointer
+      #imageBox
+        position: relative
+        width: 34%
+        float: left
+        img
+          position: relative
+          width: 100%
+          height: auto
+      #textInfo
+        position: relative
+        width: 56%
+        padding: 5%
+        float: left
+        min-height: 340px
+        top: 80px
+        opacity: 0
+        #characterName
+          font-family: "LongShot"
+          font-size: 30px
+          color: $colorWhite
+        #characterInfo
+          font-family: "GeosansLight"
+          font-size: 18px
+          color: $colorWhite
+        .socialMediaCharacter
+          position: relative
+          left: 0
+          width: 20%
+          padding: 50px 0
+          a
+            img
+              position: relative
+              float: left
+              width: 23px
+              margin-right: 10px
+
+    #Footer
+      position: relative
+      width: 100%
+      padding: 20px 0px
+      img
+        position: relative
+        width: 20%
+        left: 40%
+    .castSlide
+      position: relative
+      width: 100%
+      margin-top: 50px
+      height: 500px
+      top: 0
+      left: 0
+      overflow: hidden
+      .arrow
+        position: absolute
+        width: 25px
+        height: auto
+        top: 40%
+        z-index: 1
+        cursor: pointer
+        filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, 1))
+      ul
+        position: relative
+        left: -380px * 5
+        li:hover > .mask img
+          filter: grayscale(0)
+          transform: scale(1.1) translateY(4%)
+        li
+          position: relative
+          float: left
+          width: 500px
+          height: 475px
+          margin: 0 -60px
+          .tag
+            position: absolute
+            bottom: 0px
+            left: 1%
+            width: 78%
+            height: 75px
+            clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%)
+            background: $colorMiddleBlue
+            .text
+              position: relative
+              width: 84%
+              left: 8%
+              margin-top: 10px
+              .socialMediaCharacter
+                position: absolute
+                right: 0px
+                top: 0px
+                img
+                  position: relative
+                  width: 23px
+                  float: left
+                  margin-right: 10px
+              .titleText
+                position: relative
+                font-family: "LongShot"
+                color: $colorWhite
+                font-size: 25px
+                border-bottom: 2px solid $colorWhite
+              .infoTex
+                position: relative
+                font-family: "GeosansLight"
+                color: $colorWhite
+                font-size: 20px
+          .mask
+            position: relative
+            width: 500px
+            height: 400px
+            overflow: hidden
+            cursor: pointer
+            clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)
+            img
+              position: relative
+              width: 100%
+              transform: scale(1.2) translateY(8%)
+              filter: grayscale(1)
+              transition: all 0.3s
+
+    .content
+      position: relative
+      width: 80vw
+      left: 10vw
+      margin-top: 5vw
+      margin-bottom: 50px
+      .footerOnlyM
+        display: none
+      .subtitulosAgradecimientos
+        position: relative
+        width: 100%
+        margin: 150px 0px 30px 0px
+        font-family: "LongShot"
+        color: $colorWhite
+        font-size: 35px
+        text-align: center
+        text-transform: uppercase
+      .agradecimientosBlock
+        position: relative
+        width: 100%
+        min-height: 420px
+        .itemAgradecimientos:hover > .itemImageAgradecumientosBox > .itemImageAgradecumientos
+          filter: grayscale(0)
+        .itemAgradecimientos
+          position: relative
+          float: left
+          width: 23%
+          margin: 0 1%
+          min-height: 100px
+          .itemImageAgradecumientosBox
+            position: relative
+            min-height: 200px
+            width: 100%
+            .itemImageAgradecumientos
+              position: relative
+              width: 100%
+              height: auto
+              filter: grayscale(1)
+              transition: all 0.3s
+          .text
+            position: relative
+            width: 100%
+            left: 0%
+            margin-top: 10px
+            .socialMediaCharacter
+              position: absolute
+              right: 0px
+              top: 0px
+              img
+                position: relative
+                width: 25px
+                float: left
+                margin-right: 10px
+            .titleText
+              position: relative
+              font-family: "LongShot"
+              color: $colorWhite
+              font-size: 30px
+              border-bottom: 2px solid $colorWhite
+            .infoTex
+              position: relative
+              font-family: "GeosansLight"
+              color: $colorWhite
+              font-size: 20px
+        .itemSolitario
+          margin-left: 37.5%
+      .title
+        position: relative
+        width: auto
+        height: 80px
+      p
+        width: 70%
+        @include normalText
+      .contactBox
+        position: relative
+        width: 100%
+        min-height: 50vh
+        margin-top: 50px
+        .contactForm
+          position: relative
+          float: left
+          width: 50%
+          form
+            position: relative
+            width: 100%
+            .inputSubmit:hover
+              background: $colorWhite
+              color: $colorDarkBlue
+            .inputSubmit
+              position: relative
+              width: 30%
+              left: 70%
+              background: none
+              border: 1px solid $colorWhite
+              font-family: "GeosansLight"
+              color: $colorWhite
+              font-size: 18px
+              height: 25px
+              cursor: pointer
+              outline: none
+              transition: all 0.3s
+            textarea:focus, .inputText:focus, textarea:hover, .inputText:hover
+              background: $colorWhite
+              color: $colorDarkBlue
+            #formInfo
+              color: #4fa152
+              font-family: "GeosansLight"
+            .inputText
+              position: relative
+              width: 99%
+              padding: 5px 0 5px 1%
+              height: 25px
+              background: none
+              border: 1px solid $colorWhite
+              font-family: "GeosansLight"
+              color: $colorWhite
+              font-size: 18px
+              outline: none
+              margin: 2px 0
+              transition: all 0.3s
+            textarea
+              position: relative
+              width: 99%
+              padding-left: 1%
+              min-height: 130px
+              background: none
+              border: 1px solid $colorWhite
+              font-family: "GeosansLight"
+              color: $colorWhite
+              font-size: 18px
+              outline: none
+              margin: 2px 0
+              resize: vertical
+              transition: all 0.6s
+        .contactText
+          position: relative
+          float: left
+          width: 45%
+          padding-right: 5%
+          .contactTitle
+            position: relative
+            font-family: "LongShot"
+            color: $colorWhite
+            font-size: 35px
+          .contactInfo
+            position: relative
+            font-family: "GeosansLight"
+            color: $colorWhite
+            font-size: 18px
+
+      .aboutUsModalM
+        display: none
+      .aboutUsModal
+        position: relative
+        width: 80%
+        left: 10%
+        height: 65vh
+        margin-top: 50px
+        .characterAboutUs:hover > img
+          transform: scale(1.1)
+          filter: grayscale(0)
+        .characterAboutUs:hover > .shortInfo
+          bottom: 0
+        .fullInfoBox
+          position: absolute
+          width: 32vw
+          height: 32vw
+          top: 0
+          left: 0
+          background: $colorMiddleBlue
+          transition: all 0.3s
+          .socialMediaCharacter
+            position: absolute
+            width: 100%
+            right: 0
+            bottom: 0
+            a
+              position: relative
+              float: left
+              margin: 0 3px
+              img
+                position: relative
+                width: 25px
+
+          .infoCharacter
+            position: relative
+            width: 80%
+            height: 80%
+            top: 10%
+            left: 0%
+            opacity: 0
+          .infoCharacterTitle
+            position: relative
+            @include  titleText
+          .infoCharacterText
+            @include normalText
+          .closeFullInfo
+            position: absolute
+            top: 20px
+            right: 20px
+            width: 25px
+            height: auto
+            cursor: pointer
+        .characterAboutUs
+          position: relative
+          width: 32vw
+          height: 32vw
+          float: left
+          overflow: hidden
+          cursor: pointer
+          .forceImgClass
+            transform: scale(1.1)
+            filter: grayscale(0)
+          img
+            position: relative
+            width: 100%
+            height: auto
+            transition: all 0.3s
+            filter: grayscale(1)
+          .shortInfo
+            position: absolute
+            width: 100%
+            height: 10%
+            bottom: -10%
+            background: rgba(6, 11, 13, 0.8)
+            transition: all 0.3s
+            .shortName
+              margin: 15px 0 0 20px
+              @include normalText
+              font-size: 25px
+
+
+  #home
+    position: absolute
+    width: 100vw
+    height: 100vh
+    top: 0
+    left: 0
+    .film
+      position: relative
+      width: 100%
+      height: 100%
+      .pausaMenu
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba(0, 0, 0, 0.4)
+        opacity: 0
+        display: none
+        transition: all 0.3s
+        .pausaTitleBox
+          position: relative
+          width: 100%
+          margin-top: 10%
+          img
+            position: relative
+            width: 16%
+            margin-left: 42%
+          .btnMenuBox
+            position: relative
+            margin-top: 50px
+            width: 40%
+            height: 50px
+            margin-left: 30%
+            .btnMenu:hover
+              @include buttonHover
+            .btnMenu
+              position: relative
+              @include button
+              width: 39%
+              margin: 0 2%
+              float: left
+        .pausaText
+          position: relative
+          margin-top: 3%
+          width: 40%
+          margin-left: 30%
+          text-align: center
+          font-size: 20px
+          @include normalText
+        #timeLine
+          position: relative
+          width: 70%
+          margin-top: 3%
+          margin-left: 15%
+          height: 100px
+          border-left: 1px solid $colorWhite
+          border-right: 1px solid $colorWhite
+          overflow: hidden
+          .dashLine
+            position: absolute
+            width: 100%
+            height: 1px
+            border-top: 1px dashed $colorWhite
+            top: 50%
+          .completedLine1
+            position: absolute
+            width: 0
+            height: 0px
+            border-top: 2px solid $colorWhite
+            border-bottom: 2px solid $colorWhite
+            top: 48%
+            background: $colorWhite
+          .posDot:hover > .dotDescripcion
+            opacity: 1
+          .posDot
+            position: absolute
+            width: 10px
+            height: 10px
+            border-radius: 10px
+            background: $colorWhite
+            top: 45%
+            cursor: pointer
+            .dotDescripcion
+              position: absolute
+              top: -42px
+              left: -130px
+              clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 55% 75%, 50% 100%, 45% 75%, 0% 75%)
+              width: 250px
+              height: 35px
+              padding: 0 10px
+              background: $colorWhite
+              opacity: 0
+              transition: all 0.3s
+              text-align: center
+              @include normalText
+              color: $colorDarkBlue
+              font-size: 16px
+          .startDot
+            left: -5px
+      #controlsBox
+        position: absolute
+        width: 50%
+        height: 10vh
+        left: 0
+        bottom: 0
+        padding-left: 1%
+        z-index: 2
+        .controlBtn
+          position: relative
+          float: left
+          width: 1vw
+          height: 1vw
+          margin-top: 4%
+          cursor: pointer
+          img
+            position: absolute
+            width: 100%
+            top: 0
+            left: 0
+            transition: all 0.2s
+      .visible
+        opacity: 1 !important
+      #ganzuaBox
+        position: absolute
+        width: 100vw
+        height: 100vh
+        background: rgba(0, 0, 0, 0.9)
+        z-index: 6
+        transition: all 0.4s
+        opacity: 0
+        .QTgame
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          z-index: 2
+          display: none
+          opacity: 0
+          .QTinteractionsBox
+            position: relative
+            float: left
+            width: 40%
+            margin-left: 10%
+            height: 60%
+            margin-top: 10%
+            .timerContainer
+              position: absolute
+              width: 200%
+              height: 6px
+              bottom: -15%
+              left: -110%
+              border-radius: 3px
+              background: rgba(255, 255, 255, 0.2)
+              overflow: hidden
+              opacity: 1
+              transition: all 0.5s
+              .timer
+                position: relative
+                height: 100%
+                background: white
+                transition: all linear 0.5s
+            .QTbuttonsBox
+              position: absolute
+              width: 50%
+              bottom: 0
+              .QTButton
+                width: 100%
+                margin-top: 5%
+                @include button
+              .QTButton:hover
+                @include buttonHover
+            .QTpowerBar
+              position: absolute
+              width: 10%
+              height: 100%
+              border: 3px solid $colorWhite
+              right: 10%
+              .QTsafeZone
+                position: absolute
+                width: 100%
+                height: 10%
+                bottom: 10%
+                background: rgba(0, 200, 0, 0.4)
+                z-index: 2
+              .QTpowerLevel
+                position: absolute
+                bottom: 0
+                height: 0%
+                width: 100%
+                background: rgba(200, 0, 0, 1)
+                transition: all 0.1s
+          .QTcerraduraBox
+            position: relative
+            width: 33%
+            margin-top: 10%
+            margin-left: 10%
+            float: left
+            .QTcerradura
+              position: relative
+              width: 100%
+            .QTperno
+              position: absolute
+              width: 25%
+              bottom: 1%
+              cursor: pointer
+              transition: all 0.3s
+              z-index: 2
+              @include notSelectableText
+            .QTselectedP
+              outline: 4px dashed green
+            .QTganzua
+              position: absolute
+              width: 100%
+              left: 94%
+              top: 10%
+              transition: all 0.3s
+        .QTInstructions
+          position: relative
+          width: 100vw
+          height: 100vh
+          transition: all 0.4s
+          z-index: 1
+          .btnCerrarSlide
+            position: relative
+            width: 12vw
+            margin-left: 43vw
+            margin-top: 20px
+            @include button
+          .btnCerrarSlide:hover
+            @include buttonHover
+          .quickTimeTitle
+            text-transform: uppercase
+            font-family: "LongShot"
+            color: $colorWhite
+            position: relative
+            font-size: 70px
+            margin-top: 5vw
+            width: 100%
+            text-align: center
+          .slideQuickTimeBox
+            position: relative
+            width: 70vw
+            margin-left: 15vw
+            min-height: 400px
+            .slideElementQT
+              position: absolute
+              width: 100%
+              height: 400px
+              top: 0
+              left: 0
+              transition: all 0.4s
+              .slideText
+                text-align: center
+                @include normalText
+                width: 80%
+                margin-left: 10%
+              img
+                position: relative
+                width: 50%
+                left: 25%
+                margin-top: 20px
+            .slideElementQTHidde
+              opacity: 0
+          .slideQTDots
+            position: relative
+            width: 10vw
+            margin-left: 45vw
+            height: 30px
+            .dotQT
+              position: relative
+              width: 1vw
+              height: 1vw
+              border-radius: 30px
+              border: 1px solid $colorWhite
+              float: left
+              margin: 0 1vw
+              cursor: pointer
+              transition: all .4s
+            .dotQTFill
+              background: $colorWhite
+      #decisionBox
+        position: absolute
+        width: 100%
+        height: 200px
+        bottom: 0
+        background: rgba(0,0,0,0.8)
+        transition: all 0.4s
+        opacity: 0
+        z-index: 6
+        .optionBox
+          position: absolute
+          width: 80%
+          height: 90px
+          bottom: 50px
+          left: 10%
+          .optionValue
+            position: relative
+            width: 50%
+            height: 100%
+            left: 0
+            opacity: 1
+            float: left
+            cursor: pointer
+            transition: all 0.5s
+            #option1:hover > .sensualBar
+              width: 120px
+            #option2:hover > .sensualBar
+              width: 120px
+            #option1, #option2
+              position: relative
+              width: 100%
+              height: 100%
+              top: 0
+              left: 0
+              opacity: 1
+              transition: all 0.5s
+              p
+                font-family: "LongShot"
+                text-transform: uppercase
+                font-size: 40px
+                color: #74818c
+                transition: all 0.3s
+                margin-bottom: 0
+                text-align: center
+                margin-top: 20px
+              .sensualBar
+                position: relative
+                width: 0px
+                margin: 0 auto
+                height: 2px
+                background: #74818c
+                transition: all 0.4s
+        .timerContainer
+          position: absolute
+          width: 80%
+          height: 6px
+          top: 50px
+          left: 10%
+          border-radius: 3px
+          background: rgba(255, 255, 255, 0.2)
+          overflow: hidden
+          opacity: 1
+          transition: all 0.5s
+          .timer
+            position: relative
+            height: 100%
+            background: white
+            transition: all linear 0.5s
+
+      .videoPlayerBox
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        overflow: hidden
+        .video-react
+          position: relative
+          padding-top: 0 !important
+          video
+            position: relative
+            width: 100vw
+            height: 100vh
+    .homeContent
+      position: relative
+      width: 100vw
+      height: 100vh
+      overflow: hidden
+      .backgroundImage
+        position: absolute
+        width: 100%
+        height: auto
+        top: 0
+        left: 0
+        z-index: -1
+      .opaque
+        position: relative
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0,0.3)
+        transition: all 0.3s
+        .soundMenuBox
+          position: absolute
+          width: 100vw
+          height: 100vh
+          top: 0
+          .soundTitle
+            position: absolute
+            width: 30vw
+            height: auto
+            left: 35vw
+            top: 20vh
+          .optionsSound
+            position: absolute
+            width: 60vw
+            left: 20vw
+            top: 50vh
+            .itemSoundModeBox
+              position: relative
+              width: 50%
+              float: left
+              cursor: pointer
+              transition: left 0.4s
+              #optionSound1
+                img
+                  left: 35%
+              #optionSound2
+                img
+                  left: 36%
+              #optionSound3
+                img
+                  left: 30%
+              .itemSoundMode:hover > img
+                transform: scale(1.1)
+              .itemSoundMode
+                position: relative
+                width: 100%
+                left: 0
+                top: 0
+                opacity: 1
+                transition: all 0.4s
+                img
+                  position: relative
+                  height: 200px
+                  width: auto
+                  transition: all 0.5s
+                p
+                  position: relative
+                  font-family: "GeosansLight"
+                  width: 80%
+                  left: 10%
+                  font-size: 20px
+                  color: #D7D7D9
+                  text-align: center
+        .startButton
+          position: absolute
+          top: 55%
+          left: 45%
+          @include button
+        .startButton:hover
+          @include buttonHover
+
+        .logo
+          position: absolute
+          width: 40%
+          left: 30%
+          top: 25%
+  .movileMenuBtn
+    display: none
+  nav
+    position: absolute
+    width: 100%
+    height: 5vw
+    z-index: 3
+    transition: all 0.3s ease-in
+    .socialMedia
+      position: absolute
+      top: 40%
+      right: 10%
+      a:hover
+        opacity: 1
+      a
+        position: relative
+        float: left
+        margin: 0 3px
+        opacity: 0.5
+        transition: all 0.3s
+        img
+          position: relative
+          width: 25px
+          height: auto
+
+    ul
+      position: absolute
+      width: 60%
+      top: 40%
+      left: 10%
+      .separate
+        border-right: 1px solid $colorWhite
+      li
+        position: relative
+        float: left
+        padding: 0 1%
+        .navLink
+          color: $colorWhite
+          opacity: 0.5
+          transition: all 0.3s
+          font-family: GeosansLight
+          font-size: 20px
+          padding: 3px 0px
+        .navLink:hover
+          opacity: 1
+          border-bottom: 1px solid $colorWhite
+
+
+//animaciones de react-transition-group para componentes principales
+
+
+// NOTE: objeto que entra
+.blockTransition-enter
+  opacity: 0
+  //transform: translateY(50px)
+  z-index: 1
+  //transform: rotate(90deg)
+  transition: all 0.3s ease-in
+
+
+.blockTransition-enter.blockTransition-enter-active
+  opacity: 1
+  //transform: translateY(0px)
+  transition: all 0.3s ease-in
+
+// NOTE: objeto que sale
+.blockTransition-exit.blockTransition-exit-active
+  //transform: rotate(15deg) scale(2)
+  transition: all 0.3s ease-in
+  filter: blur(20px) brightness(5)
+  transform: rotate(10deg) scale(1.5)
+  opacity: 0
+
+.staticOpacity-enter,
+.staticOpacity-appear
+  opacity: 0
+  z-index: 1
+
+
+.staticOpacity-enter-active,
+.staticOpacity-appear-active
+  opacity: 1
+  transition: opacity ease-out 1s
+
+
+.staticOpacity-exit
+  opacity: 1
+
+
+.staticOpacity-exit-active
+  opacity: 0
+  transition: opacity ease-out 0.4s
+
+
+.bigItems-enter,
+.bigItems-appear
+  opacity: 0
+  transform: translate(0px,50px)
+  z-index: 1
+
+
+.bigItems-enter-active,
+.bigItems-appear-active
+  opacity: 1
+  transition: opacity ease-out 1s, transform ease-out 1s
+  transform: translate(0px,0px)
+
+
+.bigItems-exit
+  opacity: 0
+  transform: translate(0px,0px)
+
+
+.bigItems-exit-active
+  opacity: 0
+  transform: translate(0px,50px)
+  transition: opacity ease-out 0.4s, transform ease-out 0.4s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Scroll bar
+/* width */
+::-webkit-scrollbar
+  width: 10px
+
+
+/* Track */
+::-webkit-scrollbar-track
+  background: rgba(0, 0, 0, 0)
+
+
+/* Handle */
+::-webkit-scrollbar-thumb
+  background: rgba(0, 0, 0, 0.3)
+  border-radius: 100px
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  background: rgba(0, 0, 0, 0.5)
